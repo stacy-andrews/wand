@@ -3237,6 +3237,10 @@ class Image(BaseImage):
                                          linear_range * black_point,
                                          linear_range * white_point)
 
+    @manipulative
+    def clip(self):
+        library.MagickClipImage(self.wand)
+
     def normalize(self, channel=None):
         """Normalize color channels.
 
