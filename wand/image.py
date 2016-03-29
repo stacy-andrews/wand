@@ -3239,6 +3239,8 @@ class Image(BaseImage):
 
     @manipulative
     def clip(self):
+        """Clips along the first path from the 8BIM profile, if present.
+        """
         library.MagickClipImage(self.wand)
 
     def normalize(self, channel=None):
